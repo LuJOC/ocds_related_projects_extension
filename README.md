@@ -53,14 +53,16 @@ Also, it contains an array with the information about the related projects' cont
 	•	Uri - A URI pointing to further information about this project.
 	
 With an object called relatedProjects.metrics with the fields:
+
 	•	Description - Updates on the actual delivered results.
 	•	Id- An identifier for this metric. In some cases this may be drawn from a codelist of metrics required for this type of contracting process, or in other instances may be an arbitrary identifier.
 	•	Title - The title of this metric.
 	
 An object named relatedProjects.metrics.observations with the fields:
-•	Id - ID of metric's observation.
-•	Measure - Metric's observation measure.
-•	Unit.name - Unit's name.
+
+	•	Id - ID of metric's observation.
+	•	Measure - Metric's observation measure.
+	•	Unit.name - Unit's name.
 
 ## Example
 
