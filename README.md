@@ -6,6 +6,7 @@ This extension already exists in the PPPs block of extensions. However, we propo
 
 	•	The total investment amount.
 	•	Projects’ specific localization (geolocation).
+	•	Contracts’ descriptions and properties.
 
 
 ## Extension fields
@@ -40,10 +41,26 @@ Also contains an object relatedProjects.locations.geometry with the fields:
 	•	Type - The type of geoJSON Geometry Objects being provided. To provide latitude and longitude use ‘point’, and enter an array of [latitude, longitude] as the value of coordinates field. Note the capitalization of type values - set in order to maintain compatibility with geoJSON.
 	•	Coordinates – Array de coordinates: e.g. [37.42,-122.085].
 
-And an object named relatedprojects.totalValue with the fields:
+And an object named relatedProjects.totalValue with the fields:
 
 	•	Amount - Amount as a number.
 	•	Currency - The currency for each amount should always be specified using the uppercase 3-letter currency code from ISO4217.
+	
+Also, it contains an array with the information about the related projects' contracts implementation stage: 
+	
+	•	Id - An externally provided identifier for the project. This might be drawn from a project’s register, or may be based on the canonical version of a project name. Project IDs should be unique to a publisher. URIs can be used.
+	•	Title -  The name of the project to which this contracting process relates. Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.
+	•	Uri - A URI pointing to further information about this project.
+	
+With an object called relatedProjects.metrics with the fields:
+	•	Description - Updates on the actual delivered results.
+	•	Id- An identifier for this metric. In some cases this may be drawn from a codelist of metrics required for this type of contracting process, or in other instances may be an arbitrary identifier.
+	•	Title - The title of this metric.
+	
+An object named relatedProjects.metrics.observations with the fields:
+•	Id - ID of metric's observation.
+•	Measure - Metric's observation measure.
+•	Unit.name - Unit's name.
 
 ## Example
 
